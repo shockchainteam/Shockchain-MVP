@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shockchain Energy Trading</title>
+</head>
+<body>
+    <h1>Welcome to Shockchain</h1>
+    <button onclick="connectWallet()">Connect Wallet</button>
+</body>
+<script>
+    async function connectWallet() {
+        if (window.ethereum) {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            console.log("Wallet Connected");
+        } else {
+            alert("Please install MetaMask");
+        }
+    }
+</script>
+</html>
+
